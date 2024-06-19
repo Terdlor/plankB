@@ -1,0 +1,25 @@
+telegram:
+  botName: ***
+  token: ***
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /gadget-console
+      settings:
+        trace: false
+        web-allow-others: false
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      connection-test-query: select 1
+      connection-timeout: 1000
+      minimum-idle: 10
+      idle-timeout: 600000
+      max-lifetime: 180000
+      driver-class-name: org.h2.Driver
+      jdbc-url: jdbc:h2:file:./data/plankBdb
+      username: sa
+      password: 111
+server:
+  port: 8090
